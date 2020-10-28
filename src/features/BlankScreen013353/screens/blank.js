@@ -32,6 +32,7 @@ export default class Blank extends React.Component {
         checked={this.state.CheckBox_3}
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
+      <Text>Sample text content</Text>
     </View>
   )
 }
@@ -41,6 +42,10 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
   View_1: {},
-  CheckBox_3: {}
+  CheckBox_3: {},
+  View_1: {},
+  CheckBox_3: {},
+  Text_5: {}
 })
