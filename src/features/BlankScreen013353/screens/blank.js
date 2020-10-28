@@ -23,7 +23,14 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { CheckBox_3: true }
+  state = {
+    CheckBox_3: true,
+    TextInput_7: "",
+    DateTimePicker_11: new Date(""),
+    TextInput_13: "",
+    TextInput_15: "",
+    CheckBox_30: true
+  }
 
   render = () => (
     <View>
@@ -33,6 +40,40 @@ export default class Blank extends React.Component {
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
       <Text>Sample text content</Text>
+      <TextInput
+        placeholder="Sample text input placeholder"
+        value={this.state.TextInput_7}
+        onChangeText={nextValue => this.setState({ TextInput_7: nextValue })}
+      />
+      <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <DateTimePicker
+        showIcon={false}
+        date={this.state.DateTimePicker_11}
+        onDateChange={selectedDate =>
+          this.setState({ DateTimePicker_11: selectedDate })
+        }
+      />
+      <TextInput
+        placeholder="Number Input Placeholder"
+        keyboardType="numeric"
+        value={this.state.TextInput_13}
+        onChangeText={nextValue => this.setState({ TextInput_13: nextValue })}
+      />
+      <TextInput
+        placeholder="Sample text input placeholder"
+        multiline={true}
+        value={this.state.TextInput_15}
+        onChangeText={nextValue => this.setState({ TextInput_15: nextValue })}
+      />
+      <Slider value={50} minimumValue={0} maximumValue={100} />
+      <CheckBox
+        title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+        checked={this.state.CheckBox_30}
+        onPress={nextChecked => this.setState({ CheckBox_30: nextChecked })}
+      />
+      <Icon name="star" />
     </View>
   )
 }
@@ -47,5 +88,16 @@ const styles = StyleSheet.create({
   CheckBox_3: {},
   View_1: {},
   CheckBox_3: {},
-  Text_5: {}
+  Text_5: {},
+  View_1: {},
+  CheckBox_3: {},
+  Text_5: {},
+  TextInput_7: {},
+  Button_9: {},
+  DateTimePicker_11: {},
+  TextInput_13: {},
+  TextInput_15: {},
+  Slider_27: {},
+  CheckBox_30: {},
+  Icon_33: {}
 })
