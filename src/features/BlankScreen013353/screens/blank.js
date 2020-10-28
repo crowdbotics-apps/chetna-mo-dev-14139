@@ -37,10 +37,7 @@ export default class Blank extends React.Component {
         checked={this.state.CheckBox_3}
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
-      <Text>Sample text content</Text>
-      <Button title="Press me!" onPress={() => alert("Pressed!")} />
       <DateTimePicker
-        showIcon={false}
         date={this.state.DateTimePicker_11}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_11: selectedDate })
@@ -49,13 +46,12 @@ export default class Blank extends React.Component {
       <Slider value={50} minimumValue={0} maximumValue={100} />
       <CheckBox
         title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
         checked={this.state.CheckBox_30}
         onPress={nextChecked => this.setState({ CheckBox_30: nextChecked })}
       />
       <Icon name="star" />
       <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         value={this.state.Switch_36}
         onValueChange={nextChecked => this.setState({ Switch_36: nextChecked })}
       />
@@ -101,6 +97,13 @@ const styles = StyleSheet.create({
   CheckBox_3: {},
   Text_5: {},
   Button_9: {},
+  DateTimePicker_11: {},
+  Slider_27: {},
+  CheckBox_30: {},
+  Icon_33: {},
+  Switch_36: {},
+  View_1: {},
+  CheckBox_3: {},
   DateTimePicker_11: {},
   Slider_27: {},
   CheckBox_30: {},
