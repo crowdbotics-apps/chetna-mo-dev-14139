@@ -1,6 +1,6 @@
 import axios from "axios"
 const chetnamoAPI = axios.create({
-  baseURL: "https://chetna-mo-dev-14139-prod.herokuapp.com/",
+  baseURL: "https://chetna-mo-dev-14139.botics.co/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_v1_customtext_list(action) {
