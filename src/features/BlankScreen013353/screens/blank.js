@@ -29,7 +29,8 @@ export default class Blank extends React.Component {
     DateTimePicker_11: new Date(""),
     TextInput_13: "",
     TextInput_15: "",
-    CheckBox_30: true
+    CheckBox_30: true,
+    Switch_36: true
   }
 
   render = () => (
@@ -47,7 +48,6 @@ export default class Blank extends React.Component {
       />
       <Button title="Press me!" onPress={() => alert("Pressed!")} />
       <DateTimePicker
-        showIcon={false}
         date={this.state.DateTimePicker_11}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_11: selectedDate })
@@ -55,25 +55,26 @@ export default class Blank extends React.Component {
       />
       <TextInput
         placeholder="Number Input Placeholder"
-        keyboardType="numeric"
         value={this.state.TextInput_13}
         onChangeText={nextValue => this.setState({ TextInput_13: nextValue })}
       />
       <TextInput
         placeholder="Sample text input placeholder"
-        multiline={true}
         value={this.state.TextInput_15}
         onChangeText={nextValue => this.setState({ TextInput_15: nextValue })}
       />
       <Slider value={50} minimumValue={0} maximumValue={100} />
       <CheckBox
         title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
         checked={this.state.CheckBox_30}
         onPress={nextChecked => this.setState({ CheckBox_30: nextChecked })}
       />
       <Icon name="star" />
+      <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
+        value={this.state.Switch_36}
+        onValueChange={nextChecked => this.setState({ Switch_36: nextChecked })}
+      />
     </View>
   )
 }
@@ -99,5 +100,17 @@ const styles = StyleSheet.create({
   TextInput_15: {},
   Slider_27: {},
   CheckBox_30: {},
-  Icon_33: {}
+  Icon_33: {},
+  View_1: {},
+  CheckBox_3: {},
+  Text_5: {},
+  TextInput_7: {},
+  Button_9: {},
+  DateTimePicker_11: {},
+  TextInput_13: {},
+  TextInput_15: {},
+  Slider_27: {},
+  CheckBox_30: {},
+  Icon_33: {},
+  Switch_36: {}
 })
